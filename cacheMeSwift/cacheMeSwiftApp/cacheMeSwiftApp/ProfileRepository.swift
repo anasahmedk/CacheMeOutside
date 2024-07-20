@@ -9,7 +9,6 @@ import Foundation
 
 // MARK: Typealias
 typealias ProfileBalancesResults = (Result< Balance, APIError>) -> Void
-typealias ProfileTransactionResults = (Result< Transaction, APIError>) -> Void
 typealias ProfilePointsResults = (Result< PointBalance, APIError>) -> Void
 
 // MARK: Protocol

@@ -10,14 +10,13 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "points")
-public class PointBalance {
+public class PointBalanceEntity {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Long pointId;
 
     @Column(name = "accountId")
-    private Double accountId;
-
+    private Double amount;
 
 }

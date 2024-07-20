@@ -20,6 +20,7 @@
     <surefire.version>3.2.5</surefire.version>
     <generator.version>7.5.0</generator.version>
     <jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version> <!-- OpenAPI-->
+    <mapstruct.version>1.5.5.Final</mapstruct.version>
   </properties>
   <dependencies>
     <dependency>
@@ -75,6 +76,17 @@
       <groupId>org.openapitools</groupId>
       <artifactId>jackson-databind-nullable</artifactId>
       <version>${jackson-databind-nullable.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>${mapstruct.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>${mapstruct.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 

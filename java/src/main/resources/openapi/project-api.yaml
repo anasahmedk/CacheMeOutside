@@ -22,15 +22,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Chat'
-  /members/{id}/chats:
+  /chats:
     post:
       operationId: chat
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
       requestBody:
         content:
           application/json:

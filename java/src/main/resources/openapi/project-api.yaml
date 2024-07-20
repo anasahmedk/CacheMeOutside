@@ -162,7 +162,7 @@ components:
     Chat:
       type: object
       properties:
-        mesage:
+        message:
           type: string
     Transaction:
       type: object

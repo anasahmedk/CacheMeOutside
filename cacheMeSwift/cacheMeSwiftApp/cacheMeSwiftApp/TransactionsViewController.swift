@@ -9,6 +9,7 @@ import UIKit
 
 class TransactionsViewController: UIViewController {
 
+    @IBOutlet weak var transactionsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

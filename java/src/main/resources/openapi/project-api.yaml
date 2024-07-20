@@ -169,7 +169,6 @@ components:
       properties:
         amount:
           type: number
-          format: double
           example: 10.00
         description:
           type: string

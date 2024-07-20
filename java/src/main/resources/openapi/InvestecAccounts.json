@@ -1789,28 +1789,28 @@
             "type": "number"
           },
           "postingDate": {
-            "format": "date-time",
+            "format": "date",
             "description": "Date and time when a transaction entry is posted to an account on the account servicer's books.\r\nUsage: Booking date is the expected booking date, unless the status is booked, in which case it is the actual booking date.\r\nAll dates in the JSON payloads are represented in ISO 8601 date-time format.\r\nAll date-time fields in responses must include the timezone. An example is below:\r\n2017-04-05T10:43:07+00:00",
             "maxLength": 10,
             "minLength": 1,
             "type": "string"
           },
           "valueDate": {
-            "format": "date-time",
+            "format": "date",
             "description": "Date and time at which assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit transaction entry.\r\nUsage: If transaction entry status is pending and value date is present, then the value date refers to an expected/requested value date.\r\nFor transaction entries subject to availability/float and for which availability information is provided, the value date must not be used. In this case the availability component identifies the number of availability days.\r\nAll dates in the JSON payloads are represented in ISO 8601 date-time format.\r\nAll date-time fields in responses must include the timezone. An example is below:\r\n2017-04-05T10:43:07+00:00",
             "maxLength": 10,
             "minLength": 1,
             "type": "string"
           },
           "actionDate": {
-            "format": "date-time",
+            "format": "date",
             "description": "Date and time at which assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit transaction entry.\r\nUsage: If transaction entry status is pending and value date is present, then the value date refers to an expected/requested value date.\r\nFor transaction entries subject to availability/float and for which availability information is provided, the value date must not be used. In this case the availability component identifies the number of availability days.\r\nAll dates in the JSON payloads are represented in ISO 8601 date-time format.\r\nAll date-time fields in responses must include the timezone. An example is below:\r\n2017-04-05T10:43:07+00:00",
             "maxLength": 10,
             "minLength": 1,
             "type": "string"
           },
           "transactionDate": {
-            "format": "date-time",
+            "format": "date",
             "description": "Date and time at which assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit transaction entry.\r\nUsage: If transaction entry status is pending and value date is present, then the value date refers to an expected/requested value date.\r\nFor transaction entries subject to availability/float and for which availability information is provided, the value date must not be used. In this case the availability component identifies the number of availability days.\r\nAll dates in the JSON payloads are represented in ISO 8601 date-time format.\r\nAll date-time fields in responses must include the timezone. An example is below:\r\n2017-04-05T10:43:07+00:00",
             "maxLength": 10,
             "minLength": 1,

@@ -25,7 +25,43 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "1"
+							"value": "4675778129910189600000003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Balances Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/members/:id/balances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"members",
+						":id",
+						"balances"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4675778129910189600000003"
 						}
 					]
 				}

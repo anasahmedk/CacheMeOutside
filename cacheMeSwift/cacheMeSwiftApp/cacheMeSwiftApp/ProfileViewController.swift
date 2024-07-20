@@ -14,18 +14,16 @@ class ProfileViewController: UIViewController {
 
 
     override func viewDidLoad() {
+        viewModel.fetchResult()
         super.viewDidLoad()
-
     }
-    
-
 }
 
 
 extension  ProfileViewController: ViewModelDelegate {
 
     func reloadView(){
-        balance.text = "\(viewModel.balance)"
+        balance.text = "\(viewModel.balance?.amount ?? 0.00)"
     }
 
     func show(error: String) {

@@ -19,7 +19,7 @@ class ProfileViewModel{
         self.delegate = delegate
     }
 
-    func fetchDriver(driverName: String?) {
+    func fetchResult() {
         repository?.fetchProfileResults{ [weak self] result in
             switch result {
             case .success(let balance):

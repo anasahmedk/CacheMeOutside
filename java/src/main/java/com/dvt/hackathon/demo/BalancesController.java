@@ -11,6 +11,6 @@ public class BalancesController {
 
     @GetMapping("members/{id}/balances")
     public Balance getBalances(@PathVariable("id") final String id) {
-        return new Balance().amount(100.00);
+        return new Balance().amount((int) 100.00);
     }
 }

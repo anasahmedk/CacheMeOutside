@@ -9,6 +9,10 @@ import UIKit
 
 class TransactionsViewController: UIViewController {
 
+    @IBOutlet weak var balance: UILabel!
+    private lazy var viewModel = TransactionViewModel(repository: TransactionRepository(), delegate: self)
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,4 +30,14 @@ class TransactionsViewController: UIViewController {
     }
     */
 
+}
+
+extension  TransactionsViewController: ViewModelDelegate {
+
+    func reloadView(){
+
+    }
+
+    func show(error: String) {
+    }
 }

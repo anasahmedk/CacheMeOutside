@@ -1,0 +1,192 @@
+openapi: 3.0.3
+info:
+  title: Swagger parental gamification
+  version: 1.0.0
+paths:
+  /chats/{criteria}:
+    post:
+      operationId: rewardOrCritiqueMessage
+      parameters:
+        - name: criteria
+          in: path
+          required: true
+          schema:
+            type: string
+            enum:
+              - POSITIVE
+              - NEGATIVE
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chat'
+  /members/{id}/chats:
+    post:
+      operationId: chat
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Chat'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chat'
+  /members/{id}/transactions:
+    get:
+      operationId: getTransactions
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
+    patch:
+      operationId: updatePoints
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PointBalance'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+  /members/{id}/points:
+    get:
+      operationId: getPoints
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PointBalance'
+    patch:
+      operationId: updatePoints
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PointBalance'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+  /members/{id}/balances:
+    get:
+      operationId: getBalance
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+    patch:
+      operationId: updateBalance
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Balance'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Balance'
+components:
+  schemas:
+    Chat:
+      type: object
+      properties:
+        mesage:
+          type: string
+    Transaction:
+      type: object
+      properties:
+        amount:
+          type: integer
+          format: double
+          example: 10.00
+        description:
+          type: string
+          example: "mcdonalds burger"
+        scored:
+          type: boolean
+    Balance:
+      type: object
+      properties:
+        amount:
+          type: integer
+          format: double
+          example: 10.00
+    PointBalance:
+      type: object
+      properties:
+        amount:
+          type: integer
+          format: int64
+          example: 10

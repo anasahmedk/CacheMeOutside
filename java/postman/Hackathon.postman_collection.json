@@ -1,135 +1,198 @@
 {
-  "info": {
-    "_postman_id": "02979472-fcf1-431c-bd43-636c6daea529",
-    "name": "Hackathon",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "Get Balances",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/members/:id/balances",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "members",
-            ":id",
-            "balances"
-          ],
-          "variable": [
-            {
-              "key": "id",
-              "value": "4675778129910189600000003"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get Balances Copy",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"amount\": 100.00\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:8080/members/:id/balances",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "members",
-            ":id",
-            "balances"
-          ],
-          "variable": [
-            {
-              "key": "id",
-              "value": "4675778129910189600000003"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Chat with Criteria",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:8080/chats/:criteria",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "chats",
-            ":criteria"
-          ],
-          "variable": [
-            {
-              "key": "criteria",
-              "value": "POSITIVE"
-            }
-          ]
-        },
-        "body": {
-          "mode": "raw",
-          "raw": "{}"
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Chat",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:8080/chats",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "chats"
-          ]
-        },
-        "body": {
-          "mode": "raw",
-          "raw": "{\"message\": \"Hello, ChatGPT!\"}"
-        }
-      },
-      "response": []
-    }
-  ]
+	"info": {
+		"_postman_id": "767eee44-d1a4-4b02-85b3-157a025276d4",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Balances",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/members/:id/points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"members",
+						":id",
+						"points"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4675778129910189600000003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Points",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/members/:id/points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"members",
+						":id",
+						"points"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4675778129910189600000003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Points",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/members/:id/balances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"members",
+						":id",
+						"balances"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4675778129910189600000003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Balances/Transact between parent and child",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/members/:id/balances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"members",
+						":id",
+						"balances"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4675778129910189600000003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chat with Criteria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/chats/:criteria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chats",
+						":criteria"
+					],
+					"variable": [
+						{
+							"key": "criteria",
+							"value": "POSITIVE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"message\": \"Whats good financial advise to a kid that has a 100 dollars\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/chats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }

@@ -63,7 +63,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/Transaction'
     patch:
-      operationId: updatePoints
+      operationId: updateTransactions
       parameters:
         - name: id
           in: path
@@ -74,7 +74,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PointBalance'
+              $ref: '#/components/schemas/Transaction'
         required: true
       responses:
         '200':
@@ -82,7 +82,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Balance'
+                $ref: '#/components/schemas/Transaction'
   /members/{id}/points:
     get:
       operationId: getPoints

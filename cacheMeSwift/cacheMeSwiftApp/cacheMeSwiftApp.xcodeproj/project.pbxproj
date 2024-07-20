@@ -14,6 +14,8 @@
 		D86675022C4BAD8000D03956 /* cacheMeSwiftApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D86675002C4BAD8000D03956 /* cacheMeSwiftApp.xcdatamodeld */; };
 		D86675042C4BAD8300D03956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86675032C4BAD8300D03956 /* Assets.xcassets */; };
 		D86675072C4BAD8300D03956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86675052C4BAD8300D03956 /* LaunchScreen.storyboard */; };
+		D86675152C4BB4CB00D03956 /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86675142C4BB4CB00D03956 /* homeScreenViewController.swift */; };
+		D86675172C4BB4EA00D03956 /* homeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86675162C4BB4EA00D03956 /* homeScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D86675032C4BAD8300D03956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D86675062C4BAD8300D03956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D86675082C4BAD8300D03956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86675142C4BB4CB00D03956 /* homeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
+		D86675162C4BB4EA00D03956 /* homeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = homeScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		D86674F62C4BAD8000D03956 /* cacheMeSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				D86675132C4BB4B100D03956 /* home */,
 				D86674F72C4BAD8000D03956 /* AppDelegate.swift */,
 				D86674F92C4BAD8000D03956 /* SceneDelegate.swift */,
 				D86674FB2C4BAD8000D03956 /* ViewController.swift */,
@@ -68,6 +73,15 @@
 				D86675002C4BAD8000D03956 /* cacheMeSwiftApp.xcdatamodeld */,
 			);
 			path = cacheMeSwiftApp;
+			sourceTree = "<group>";
+		};
+		D86675132C4BB4B100D03956 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				D86675142C4BB4CB00D03956 /* homeScreenViewController.swift */,
+				D86675162C4BB4EA00D03956 /* homeScreen.storyboard */,
+			);
+			name = home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86675072C4BAD8300D03956 /* LaunchScreen.storyboard in Resources */,
+				D86675172C4BB4EA00D03956 /* homeScreen.storyboard in Resources */,
 				D86675042C4BAD8300D03956 /* Assets.xcassets in Resources */,
 				D86674FF2C4BAD8000D03956 /* Main.storyboard in Resources */,
 			);
@@ -142,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86675022C4BAD8000D03956 /* cacheMeSwiftApp.xcdatamodeld in Sources */,
+				D86675152C4BB4CB00D03956 /* homeScreenViewController.swift in Sources */,
 				D86674FC2C4BAD8000D03956 /* ViewController.swift in Sources */,
 				D86674F82C4BAD8000D03956 /* AppDelegate.swift in Sources */,
 				D86674FA2C4BAD8000D03956 /* SceneDelegate.swift in Sources */,

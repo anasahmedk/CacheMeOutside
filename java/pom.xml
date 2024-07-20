@@ -98,7 +98,7 @@
         <version>${generator.version}</version>
         <executions>
           <execution>
-            <id>pcaf-api</id>
+            <id>dvt-api</id>
             <goals>
               <goal>generate</goal>
             </goals>
@@ -106,6 +106,36 @@
               <inputSpec>${project.basedir}/src/main/resources/openapi/project-api.yaml</inputSpec>
               <apiPackage>com.dvt.hackathon.demo.api</apiPackage>
               <modelPackage>com.dvt.hackathon.demo.api</modelPackage>
+              <ignoreFileOverride>${project.basedir}</ignoreFileOverride>
+              <generatorName>spring</generatorName>
+              <library>spring-boot</library>
+              <skipValidateSpec>true</skipValidateSpec>
+              <configOptions>
+                <useSpringBoot3>true</useSpringBoot3>
+                <useJakartaEe>true</useJakartaEe>
+                <openApiNullable>false</openApiNullable>
+                <documentationProvider>none</documentationProvider>
+                <annotationLibrary>none</annotationLibrary>
+                <oas3>true</oas3>
+                <sourceFolder>generated-sources</sourceFolder>
+                <hideGenerationTimestamp>true</hideGenerationTimestamp>
+                <serializableModel>true</serializableModel>
+              </configOptions>
+              <generateModelTests>false</generateModelTests>
+              <generateSupportingFiles>false</generateSupportingFiles>
+              <generateApis>false</generateApis>
+              <generateApiDocumentation>false</generateApiDocumentation>
+            </configuration>
+          </execution>
+          <execution>
+            <id>investec-api</id>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <inputSpec>${project.basedir}/src/main/resources/openapi/InvestecAccounts.json</inputSpec>
+              <apiPackage>com.investec.hackathon.demo.api</apiPackage>
+              <modelPackage>com.investec.hackathon.demo.api</modelPackage>
               <ignoreFileOverride>${project.basedir}</ignoreFileOverride>
               <generatorName>spring</generatorName>
               <library>spring-boot</library>
